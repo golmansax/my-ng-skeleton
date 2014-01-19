@@ -14,24 +14,19 @@
     require('load-grunt-tasks')(grunt);
 
     // Register custom tasks
-    grunt.registerTask('default', []);
+    grunt.registerTask('default', ['test']);
 
     // Dev tasks
-    grunt.registerTask('build:dev', [
-      'shell:check_data', 'compass:dev', 'requirejs:dev'
-    ]);
+    grunt.registerTask('build:dev', ['requirejs:dev']);
     grunt.registerTask('lint', ['jshint']);
     grunt.registerTask('test', ['lint', 'build:dev', 'jasmine']);
     grunt.registerTask('dev', ['test']);
 
     // Prod tasks
-    grunt.registerTask('build:prod', ['compass:prod', 'requirejs:prod']);
+    grunt.registerTask('build:prod', ['requirejs:prod']);
 
     // Do a sanity check by running all dev commands first
     grunt.registerTask('prod', ['test', 'build:prod']);
-
-    // Generate data
-    grunt.registerTask('build:data', ['shell:generate_data']);
   };
 
   return;
