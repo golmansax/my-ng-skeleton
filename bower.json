@@ -1,0 +1,22 @@
+{
+  "name": "my-ng-skeleton",
+  "version": "0.0.0",
+  "homepage": "http://golmansax.com/my-ng-skeleton",
+  "authors": [
+    "Holman Gao <holman@golmansax.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "latest",
+    "requirejs-domready": "latest",
+    "angular": "latest",
+    "angular-mocks": "latest"
+  }
+}
